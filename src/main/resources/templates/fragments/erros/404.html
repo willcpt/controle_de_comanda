@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_BR"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutSimples}">
+	<head><meta charset="utf-8"></head>
+<section layout:fragment="corpo">
+	 <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="headline text-primary">Error 404</h1>
+          </div>
+  
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="error-page">
+       <div class="row">
+<!--         <div class="error-content"> -->
+          <h1 class="mx-auto"><i class="fas fa-exclamation-triangle text-primary"></i> 
+Não fique bravo e não chore.</h1>
+<img
+				th:src="@{/dist/img/erros/robot404.png}" 
+				alt="Logo do município" width="400px" class="mx-auto">
+          <p class="h5 my-5 mx-auto">
+			Esta página não pode ser encontrada! Verifique o link =).
+          </p>
+			<a href="javascript:history.back()" class="btn  btn-primary mx-auto">Voltar para onde estava</a>
+          
+<!--         </div> -->
+</div>
+
+        <!-- /.error-content -->
+      </div>
+      <!-- /.error-page -->
+    </section>
+      
+      
+      
+
+</section>
+</html>

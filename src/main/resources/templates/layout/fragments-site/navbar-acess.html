@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<nav th:fragment="navbar"
+		class="main-header navbar navbar-expand-md navbar-dark navbar-lightblue py-2 border-0">
+		<div class="container">
+			<button class="navbar-toggler order-1" type="button"
+				data-toggle="collapse" data-target="#navbarCollapse2"
+				aria-controls="navbarCollapse2" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<i class="fas fa-bars"></i>
+			</button>
+			<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+				<li class="nav-item pl-0"><a th:href="@{/#servidor}"
+					class="nav-link">Servidor</a></li>
+				<li class="nav-item pl-0"><a th:href="@{/#turista}"
+					class="nav-link">Turista</a></li>
+				<li class="nav-item pl-0"><a th:href="@{/#empreendedor}"
+					class="nav-link">Emprendedor</a></li>
+			</ul>
+			<div class="collapse navbar-collapse order-3" id="navbarCollapse2">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" id="decrease-font"><a href="#"
+						class="nav-link font-weight-bold"><nobr>- A</nobr></a></li>
+					<li class="nav-item" id="increase-font"><a href="#"
+						class="nav-link font-weight-bold"><nobr>+ A</nobr></a></li>
+					<li class="nav-item"><a
+						th:href="@{http://www.prefeitura156.pr.gov.br/prefeitura156/homePublico.do?action=iniciarProcessoComPrefeitura&id=32}"
+						class="nav-link" target="_blank"><i
+							class="fas fa-comments fa-lg"></i> 156</a></li>
+					<li class="nav-item"><a
+						th:href="@{https://www.facebook.com/municipiodeguaira}"
+						class="nav-link" target="_blank"><i
+							class="fab fa-facebook fa-lg"></i></a></li>
+					<li class="nav-item"><a
+						th:href="@{https://www.instagram.com/municipiodeguaira/}"
+						class="nav-link" target="_blank"><i
+							class="fab fa-instagram fa-lg"></i></a></li>
+					<li class="nav-item"><a
+						th:href="@{https://twitter.com/municipioguaira}" class="nav-link"
+						target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+					<li class="nav-item"><a
+						th:href="@{https://www.youtube.com/user/municipiodeguaira}"
+						class="nav-link" target="_blank"><i
+							class="fab fa-youtube fa-lg"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+<title>Trilho do Rock</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+<!-- Ionicons -->
+<link rel="stylesheet"
+	th:href="@{https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css}">
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet"
+	th:href="@{/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}">
+<link
+	th:href="@{https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css}"
+	rel="stylesheet">
+
+<!-- iCheck -->
+<link rel="stylesheet"
+	th:href="@{/plugins/icheck-bootstrap/icheck-bootstrap.min.css}">
+<!-- JQVMap -->
+<link rel="stylesheet" th:href="@{/plugins/jqvmap/jqvmap.min.css}">
+<!-- Theme style -->
+<link rel="stylesheet" th:href="@{/dist/css/adminlte.css}">
+<!-- overlayScrollbars -->
+<link rel="stylesheet"
+	th:href="@{/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+<!-- Daterange picker -->
+<link rel="stylesheet"
+	th:href="@{/plugins/daterangepicker/daterangepicker.css}">
+<!-- summernote -->
+<!-- <link rel="stylesheet" -->
+<!-- 	th:href="@{/plugins/summernote/summernote-bs4.css}"> -->
+<!-- DataTables -->
+<link rel="stylesheet"
+	th:href="@{/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+<link rel="stylesheet"
+	th:href="@{/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+<!-- Google Font: Source Sans Pro -->
+<link
+	th:href="@{https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700}"
+	rel="stylesheet">
+<!-- UIKit -->
+<link rel="stylesheet" th:href="@{/plugins/uikit/css/uikit.min.css}">
+<link rel="stylesheet" th:href="@{/plugins/uikit/css/uikit-rtl.min.css}">
+
+<link th:href="@{/dist/css/quill.snow.css}" rel="stylesheet">
+<link rel="stylesheet"
+	th:href="@{//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css}">
+<link
+	th:href="@{https://unpkg.com/quill-better-table@1.2.8/dist/quill-better-table.css}"
+	rel="stylesheet">
+
+<link rel="stylesheet" th:href="@{/plugins/toastr/toastr.min.css}">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="wrapper">
+		<nav th:replace="layout/fragments/navbar :: navbar"></nav>
+		<aside th:replace="layout/fragments/sidebar :: sidebar"></aside>
+		<div class="content-wrapper">
+			<div layout:fragment="corpo"></div>
+		</div>
+		<aside class="control-sidebar control-sidebar-dark"></aside>
+	</div>
+
+	<!-- jQuery -->
+	<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+	<!-- jQuery UI 1.11.4 -->
+	<script th:src="@{/plugins/jquery-ui/jquery-ui.min.js}"></script>
+	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+	<script>
+		$.widget.bridge('uibutton', $.ui.button)
+	</script>
+	<!-- Bootstrap 4 -->
+	<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script
+		th:src="@{https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js}"></script>
+	<!-- ChartJS -->
+	<script th:src="@{/plugins/chart.js/Chart.min.js}"></script>
+	<!-- Sparkline -->
+	<script th:src="@{/plugins/sparklines/sparkline.js}"></script>
+	<!-- JQVMap -->
+	<script th:src="@{/plugins/jqvmap/jquery.vmap.min.js}"></script>
+	<script th:src="@{/plugins/jqvmap/maps/jquery.vmap.usa.js}"></script>
+	<!-- jQuery Knob Chart -->
+	<!-- <script th:src="@{plugins/jquery-knob/jquery.knob.min.js}"></script> -->
+	<!-- daterangepicker -->
+	<script th:src="@{/plugins/moment/moment.min.js}"></script>
+	<script th:src="@{/plugins/daterangepicker/daterangepicker.js}"></script>
+	<!-- Tempusdominus Bootstrap 4 -->
+	<script
+		th:src="@{/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js}"></script>
+	<!-- overlayScrollbars -->
+	<script
+		th:src="@{/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js}"></script>
+	<!-- AdminLTE App -->
+	<script th:src="@{/dist/js/adminlte.js}"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<!-- <script th:src="@{/dist/js/pages/dashboard.js}"></script> -->
+	<!-- AdminLTE for demo purposes -->
+	<!-- <script th:src="@{/dist/js/demo.js}"></script> -->
+	<!-- Summernote -->
+	<!-- 	<script th:src="@{/plugins/summernote/summernote-bs4.min.js}"></script> -->
+	<!-- DataTables -->
+	<script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+	<script
+		th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+	<script
+		th:src="@{/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+	<script
+		th:src="@{/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+	<!-- UIKit -->
+	<script th:src="@{/plugins/uikit/js/uikit.min.js}"></script>
+	<script th:src="@{/plugins/uikit/js/uikit-icons.min.js}"></script>
+
+	<script
+		th:src="@{//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js}"></script>
+	<script th:src="@{/dist/js/quill.js}"></script>
+
+	<script th:src="@{/plugins/handlebars/handlebars.min.js}"></script>
+
+	<script th:src="@{/plugins/toastr/toastr.min.js}"></script>
+	<!-- 	<script th:src="@{/dist/js/upload-foto-atrativo.js}"></script> -->
+	<!-- 	<script th:src="@{/dist/js/upload-imagem-principal.js}"></script> -->
+
+	<script>
+		$(function() {
+			$("#table").DataTable({
+				"responsive" : true,
+				"autoWidth" : false
+			});
+		});
+	</script>
+	<script th:if="${success}" th:inline="javascript">
+		const message = /*[[${success}]]*/
+		toastr.success(`${message}`)
+	</script>
+	<script th:if="${error}" th:inline="javascript">
+		const message = /*[[${error}]]*/
+		toastr.error(`${message}`)
+	</script>
+	<section layout:fragment="script"></section>
+
+</body>
+</html>

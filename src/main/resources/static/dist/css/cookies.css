@@ -1,0 +1,83 @@
+.box-cookies {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.75);
+    z-index: 999;
+    transition: all .3s ease;
+}
+
+@media(max-width: 768px) {
+    .box-cookies {
+        text-align:left;
+    }
+}
+
+.box-cookies.prefeitura p {
+    font-size: 13px;
+    padding: 15px;
+    text-align: center;
+    color: #dbe0df;
+    font-weight: 400;
+}
+
+.box-cookies.opacity-0 {
+    opacity: 0;
+}
+
+.box-cookies.opacity-1 {
+    opacity: 1;
+}
+
+.box-cookies .close {
+    line-height: 0;
+    padding: 15px;
+    z-index: 100;
+    color: #fff;
+}
+
+.box-cookies a {
+    font-family: roboto-medium;
+    font-size: 13px;
+    color: #fff;
+    transition: none;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.box-cookies a:hover,.box-cookies a:active,.box-cookies a:visited {
+    color: #fff;
+}
+
+.popUp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.popUp .close {
+    position: relative;
+    display: block;
+    font-family: roboto-regular;
+    border-radius: 50px;
+    border: 1px solid #008b3c;
+    font-size: 15px;
+    max-height: 83px;
+    min-width: 100px;
+    font-weight: normal;
+    opacity: 1;
+    box-sizing: border-box;
+    background: #008b3c;
+}
+
+@media(max-width: 768px) {
+    .popUp {
+        padding:10px;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}" xmlns:trilho="http://trilho.com.br">
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div layout:fragment="corpo">
+		<section class="content-header">
+			<div class="container-fluid">
+				<div class="row mb-2">
+					<div class="col-md-6">
+						<h1 th:if="${idProduct} == null">Adicionar novo Produto</h1>
+						<h1 th:if="${idProduct} != null">Editar Produto</h1>
+					</div>
+					<div class="col-md-6">
+						<ol class="breadcrumb float-sm-right">
+							<li class="breadcrumb-item"><a th:href="@{/produtos}"
+									class="text-tools-warning">Produtos</a></li>
+							<li class="breadcrumb-item active" th:if="${idProduct} == null">Novo produto</li>
+							<li class="breadcrumb-item active" th:if="${idProduct} != null">Editar produto</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content">
+			<div class="container-fluid">
+				<form class="form" method="POST" th:action="@{/produtos}" th:object="${productModel}">
+					<div class="col-md-12">
+						<div class="card card-orange">
+							<div class="card-header">
+								<h3 class="card-title text-white">Dados do Produto</h3>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6 form-group">
+										<label>Produto</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="fas fa-box-open"></i></span>
+											</div>
+											<input type="text" id="name" class="form-control" autofocus
+												placeholder="Digite o nome do produto" th:field="*{name}" />
+										</div>
+										</div>
+										
+										<div class="col-md-6 form-group">
+										<label>Quantidade</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="fas fa-boxes"></i></span>
+											</div>
+											<input type="text" id="quantity" class="form-control" autofocus
+												placeholder="Digite a quantidade" th:field="*{quantity}" />
+										</div>
+										</div>
+										
+										<div class="col-md-6 form-group">
+										<label>Preço</label>
+										<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+											</div>
+											<input type="text" id="price" class="form-control" autofocus
+												placeholder="Digite o preço" th:field="*{price}" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<input type="hidden" name="id" th:field="*{idProduct}" />
+							<div class="card-footer">
+								<button type="submit" class="btn btn-success">Adicionar</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>

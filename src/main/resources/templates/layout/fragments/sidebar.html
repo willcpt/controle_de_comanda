@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<aside th:fragment="sidebar"
+		class="main-sidebar sidebar-dark-primary elevation-4">
+		<a th:href="@{/}" class="brand-link"> <!-- 		<img th:src="@{/dist/img/logo.png}" alt="Tribrutus Logo" -->
+			<!-- 			class="brand-image img-circle elevation-3">  --> <span
+			class="brand-text font-weight-light">Trilho do Rock</span>
+		</a>
+		<div class="sidebar">
+
+			<nav class="mt-1">
+				<ul class="nav nav-pills nav-sidebar flex-column"
+					data-widget="treeview" role="menu" data-accordion="false">
+					<li class="nav-item has-treeview"><a th:href="@{/dashboard}"
+						class="nav-link"> <i
+							class="nav-icon fas fa-tachometer-alt text-orange"></i>
+
+							Dashboard
+
+					</a></li>
+					<!-- ----------Produtos Inicio---------- -->
+					<li class="nav-header pt-2">PRODUTOS</li>
+					<li class="nav-item has-treeview"><a href="#" class="nav-link">
+							<i class="fas fa-box-open nav-icon text-orange"></i>
+							<p>
+								Produtos <i class="fas fa-angle-left right"></i>
+							</p>
+					</a>
+						<ul class="nav nav-treeview">
+							<li class="nav-item"><a
+								th:href="@{/produtos/new}" class="nav-link"> <i
+									class="nav-icon fas fa-plus"></i>
+									<p>Novo Produto</p>
+							</a></li>
+							<li class="nav-item"><a
+								th:href="@{/produtos}" class="nav-link"> <i
+									class="fas fa-th-list nav-icon"></i> <!--                   <i class="fas fa-poll-people"></i> -->
+									<p>Listar</p>
+							</a></li>
+						</ul></li>
+					<!-- ----------Produtos Fim---------- -->
+
+					<!-- ----------ADMIN Inicio---------- -->
+					<li class="nav-header">ADMIN</li>
+					<li class="nav-item has-treeview"><a href="#" class="nav-link">
+							<i class="fas fa-users nav-icon text-orange"></i>
+							<p>
+								Usuários <i class="fas fa-angle-left right"></i>
+							</p>
+					</a>
+						<ul class="nav nav-treeview">
+							<li class="nav-item"><a th:href="@{/usuarios/novo}"
+								class="nav-link"> <i class="nav-icon fas fa-user-plus"></i>
+									<p>Cadastro</p>
+							</a></li>
+							<li class="nav-item"><a th:href="@{/usuarios/lista}"
+								class="nav-link"> <i class="fas fa-user-friends nav-icon"></i>
+									<!--                   <i class="fas fa-poll-people"></i> -->
+									<p>Lista</p>
+							</a></li>
+						</ul></li>
+					<!-- ----------ADMIN fim---------- -->
+				</ul>
+			</nav>
+		</div>
+	</aside>
+</body>
+
+</html>

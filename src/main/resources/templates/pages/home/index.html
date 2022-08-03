@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layoutSite}">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div layout:fragment="corpo">
+		<div class="content-header content-header-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<h1
+							class="m-0 text-gray-dark text-bold text-xl title-warning title-first">Serviços</h1>
+					</div>
+					<div class="col-sm-6">
+						<ol class="breadcrumb float-sm-right">
+							<li class="breadcrumb-item active">Home</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content content-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-server icon-tools"></i>
+										<p class="card-text">Prefeituras</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-database icon-tools"></i>
+										<p class="card-text">Base de Dados</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-download icon-tools"></i>
+										<p class="card-text">Downloads</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-calendar-alt icon-tools"></i> <!-- 								<i class="fas fa-file-certificate"></i> -->
+										<p class="card-text">Calendário</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-header content-header-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<h1
+							class="m-0 text-gray-dark text-bold text-xl title-warning title-first">Documentação</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content content-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a th:href="@{/dicionarios/}"
+										class="card-body  text-center text-tools-warning"> <i
+										class="fas fa-book icon-tools"></i> <!-- 								<i class="fad fa-user-chart"></i> -->
+										<p class="card-text">Dicionários</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-gavel icon-tools"></i>
+										<p class="card-text">Regras de Negócio</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<svg class="icon-svg">
+                        <use
+												th:href="@{/dist/icon/tribrutus.svg#logo-tce-pr}" />
+                    </svg>
+										<p class="card-text">SIM/AM</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-bug icon-tools"></i> <!-- 			<i class="fas fa-abacus"></i> -->
+										<p class="card-text">Bugs e Erros</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-header content-header-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<h1
+							class="m-0 text-gray-dark text-bold text-xl title-warning title-first">Procedimentos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content content-texture">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a th:href="@{/softwares}"
+										class="card-body  text-center text-tools-warning"> <i
+										class="fas fa-cogs icon-tools"></i>
+										<p class="card-text">Instalações</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a th:href=@{/restores}
+										class="card-body  text-center text-tools-warning"> <i
+										class="fas fa-hdd icon-tools"></i>
+										<p class="card-text">Restore</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fas fa-history icon-tools"></i>
+										<p class="card-text">Praticas ageis</p>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-2">
+								<div class="card card-height-mob card-warning card-outline">
+									<a href=# class="card-body  text-center text-tools-warning">
+										<i class="fab fa-git-alt icon-tools"></i>
+										<p class="card-text">Git</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

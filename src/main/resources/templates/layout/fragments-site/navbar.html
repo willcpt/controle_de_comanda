@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<nav th:fragment="navbar"
+		class="main-header navbar navbar-expand-md navbar-litgh navbar-gray-dark h-0">
+		<div class="container">
+			<a th:href="@{/}" class="navbar-brand"> <img
+				 alt="Logo do tribrutus"
+				class="brand-image ">
+			</a>
+			<button class="navbar-toggler order-1" type="button"
+				data-toggle="collapse" data-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<i class="fas fa-bars text-white"></i>
+			</button>
+			<div class="collapse navbar-collapse order-3" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto row">
+
+					<li class="nav-item dropdown"><a id="home" th:href="@{/}"
+						class="nav-link text-tools-white-warning h6 m-0"><i
+							class="fas fa-home"></i> HOME</a></li>
+					<li class="nav-item dropdown"><a id="dropdownSubMenu1"
+						href="#" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"
+						class="nav-link text-tools-white-warning dropdown-toggle h6 m-0">DROP</a>
+						<ul aria-labelledby="dropdownSubMenu1"
+							class="dropdown-menu border-0 shadow">
+							<li><a href="#" class="dropdown-item">submenu</a></li>
+							<li><a href="#" class="dropdown-item">submenu</a></li>
+						</ul></li>
+					<li class="nav-item dropdown" sec:authorize="isAuthenticated()"><a
+						id="painel" th:href="@{/dashboard}"
+						class="nav-link text-tools-white-warning h6 m-0"><i
+							class="fas fa-user-cog"></i> Painel</a></li>
+					<li class="nav-item dropdown" sec:authorize="!isAuthenticated()"><a id="login"
+						th:href="@{/login}"
+						class="nav-link text-tools-white-warning h6 m-0"><i
+							class="fas fa-sign-in-alt"></i> LOGIN</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</body>
+<th:block layout:fragment="javascript-extra">
+
+</th:block>
+
+</html>
